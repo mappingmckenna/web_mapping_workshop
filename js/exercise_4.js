@@ -58,11 +58,6 @@ featureLayer.on('ready', function(){
   });
 });
 
-map.on('click',function(e){
-    $('#info').fadeOut(100);
-    $('#info').empty();
-});
-
 
 var myLocation = L.mapbox.featureLayer().addTo(map);
 
