@@ -91,6 +91,7 @@ map.on('locationfound', function(e) {
 
 map.locate({setView:true});
 
+/*
 function getDirections(frm, to){
   var jsonPayload = JSON.stringify({
     locations:[
@@ -141,7 +142,7 @@ function getDirections(frm, to){
     })
   }) 
 };
-
+*/
 // Set the initial view of the map to the whole US
 //map.setView([39, -96], 4);
 
