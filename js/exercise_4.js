@@ -17,6 +17,7 @@ var featureLayer = L.mapbox.featureLayer()
     .loadURL(dataFileToAdd)
     .addTo(map);
 
+//when loaded style and set bound to layer
 featureLayer.on('ready', function() {
   this.eachLayer(function(layer){
     layer.setIcon(L.mapbox.marker.icon({
@@ -83,6 +84,7 @@ map.on('locationfound', function(e) {
 
 });
 
+/*
 map.locate({setView:true});
 
 function getDirections(frm, to){
@@ -135,7 +137,7 @@ function getDirections(frm, to){
     })
   })
 };
-
+/*
 // Set the initial view of the map to the whole US
 //map.setView([39, -96], 4);
 
