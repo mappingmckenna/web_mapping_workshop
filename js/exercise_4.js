@@ -52,6 +52,10 @@ var info = '';
   });
 };
 
+var myGeoJSON = myLocation.getGeoJSON();
+
+getDirections(myGeoJSON.geometry.coordinates, feature.geometry.coordinates);
+
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
     layer.on('click', clickHandler);
