@@ -29,12 +29,12 @@ featureLayer.on('ready', function() {
   map.fitBounds(featureLayer.getBounds());
 });
 
-//featureLayer.on('ready', function(){
-//  this.eachLayer(function(layer){
- //   layer.bindPopup(layer.feature.properties.Name);
- // });
-//});
-
+featureLayer.on('ready', function(){
+  this.eachLayer(function(layer){
+    layer.bindPopup(layer.feature.properties.Name);
+  });
+});
+/*
 var clickHandler = function(e){
     $('#info').empty();
   var feature = e.target.feature;
@@ -90,7 +90,7 @@ map.on('locationfound', function(e) {
 
 
 map.locate({setView:true});
-
+*/
 /*
 function getDirections(frm, to){
   var jsonPayload = JSON.stringify({
