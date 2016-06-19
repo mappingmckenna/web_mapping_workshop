@@ -84,7 +84,7 @@ map.on('locationfound', function(e) {
 
 });
 
-/*
+
 map.locate({setView:true});
 
 function getDirections(frm, to){
@@ -135,7 +135,7 @@ function getDirections(frm, to){
         "stroke-width": 8
       }
     })
-  }) /*
+  }) 
 };
 
 // Set the initial view of the map to the whole US
