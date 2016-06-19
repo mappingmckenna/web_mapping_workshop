@@ -12,6 +12,22 @@ var accessToken = 'pk.eyJ1IjoiZWwtcyIsImEiOiJjbWxMT3BJIn0.aaOFFPZxMh3dFMaccYwRuw
 L.mapbox.accessToken = accessToken;
 var map = L.mapbox.map('map', mapId);
 
+var dataFileToAdd = 'data/restaurants.geojson'
+var featureLayer = L.mapbox.featureLayer()
+    .loadURL(dataFileToAdd)
+    .addTo(map);
+
+featureLayer.on('ready', function() {
+  this.eachLayer(function(layer){
+    layer.setIcon(L.mapbox.marker.icon({
+      'marker-color': '#8834bb',
+      'marker-size': 'large',
+      'marker-symbol': 'restaurant'
+    }))
+  });
+  map.fitBounds(featureLayer.getBounds());
+});
+
 // Set the initial view of the map to the whole US
 //map.setView([39, -96], 4);
 
