@@ -62,6 +62,29 @@ map.on('click',function(e){
     $('#info').empty();
 });
 
+
+var myLocation = L.mapbox.featureLayer().addTo(map);
+
+map.on('locationfound', function(e) {
+
+    myLocation.setGeoJSON({
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [e.latlng.lng, e.latlng.lat]
+        },
+        properties: {
+            'title': 'Here I am!',
+            'marker-color': '#ff8888',
+            'marker-symbol': 'star'
+        }
+    });
+
+});
+
+map.locate({setView:true});
+
+
 // Set the initial view of the map to the whole US
 //map.setView([39, -96], 4);
 
