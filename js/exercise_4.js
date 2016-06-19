@@ -56,10 +56,7 @@ featureLayer.on('ready', function(){
     layer.on('click', clickHandler);
   });
 });
-map.on('click',function(e){
-    $('#info').fadeOut(200);
-    $('#info').empty();
-});
+
 // Set the initial view of the map to the whole US
 //map.setView([39, -96], 4);
 
