@@ -39,7 +39,8 @@ var clickHandler = function(e){
     $('#info').empty();
   var feature = e.target.feature;
   $('#sidebar').fadeIn(400, function(){
-var info = '';
+
+    var info = '';
 
     info += '<div>'
     info += '<h2>' + feature.properties.Name + '</h2>'
@@ -64,6 +65,9 @@ featureLayer.on('ready', function(){
   });
 });
 
+map.on('click',function(e){
+  $('#sidebar').fadeOut(200);
+});
 
 var myLocation = L.mapbox.featureLayer().addTo(map);
 
