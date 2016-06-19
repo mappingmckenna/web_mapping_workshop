@@ -57,6 +57,11 @@ featureLayer.on('ready', function(){
   });
 });
 
+map.on('click',function(e){
+    $('#info').fadeOut(100);
+    $('#info').empty();
+});
+
 // Set the initial view of the map to the whole US
 //map.setView([39, -96], 4);
 
