@@ -46,7 +46,7 @@ var info = '';
     info +=   '<p>'  + feature.properties.descriptio + '</p>'
     info +=   '<p>'  + feature.properties.Cost + '</p>'
     info +=   '<p>'  + feature.properties.Website + '</p>'
-    info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.website + '</a></p>'
+    info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.Website + '</a></p>'
     info += '</div>'
 
     $('#info').append(info);
@@ -92,7 +92,6 @@ function getDirections(frm, to){
       {lat: to[1], lon: to[0]}
     ],
     costing: 'pedestrian',
-    units: 'kilometers'
   })
   $.ajax({
     url:'http://valhalla.mapzen.com/route',
@@ -113,7 +112,6 @@ function getDirections(frm, to){
       {lat: to[1], lon: to[0]}
     ],
     costing: 'pedestrian',
-    units: 'miles'
   })
   $.ajax({
     url:'http://valhalla.mapzen.com/route',
