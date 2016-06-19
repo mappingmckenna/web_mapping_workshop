@@ -56,7 +56,7 @@ var info = '';
 
 var myGeoJSON = myLocation.getGeoJSON();
 
-getDirections(myGeoJSON.geometry.coordinates, feature.geometry.coordinates);
+//getDirections(myGeoJSON.geometry.coordinates, feature.geometry.coordinates);
 
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
@@ -135,9 +135,9 @@ function getDirections(frm, to){
         "stroke-width": 8
       }
     })
-  })
+  }) /*
 };
-/*
+
 // Set the initial view of the map to the whole US
 //map.setView([39, -96], 4);
 
