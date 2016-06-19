@@ -28,13 +28,13 @@ featureLayer.on('ready', function() {
   });
   map.fitBounds(featureLayer.getBounds());
 });
-
+/*
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
     layer.bindPopup(layer.feature.properties.Name);
   });
 });
-/*
+*/
 var clickHandler = function(e){
     $('#info').empty();
   var feature = e.target.feature;
@@ -44,10 +44,10 @@ var clickHandler = function(e){
 
     info += '<div>'
     info += '<h2>' + feature.properties.Name + '</h2>'
-    info +=  '<p>'  + feature.properties.Type + '</p>'
-    info +=   '<p>'  + feature.properties.descriptio + '</p>'
+    //info +=  '<p>'  + feature.properties.Type + '</p>'
+   // info +=   '<p>'  + feature.properties.descriptio + '</p>'
     info +=   '<p>'  + feature.properties.Cost + '</p>'
-    info +=   '<p>'  + feature.properties.Website + '</p>'
+   // info +=   '<p>'  + feature.properties.Website + '</p>'
     info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.Website + '</a></p>'
     info += '</div>'
 
@@ -90,7 +90,7 @@ map.on('locationfound', function(e) {
 
 
 map.locate({setView:true});
-*/
+
 /*
 function getDirections(frm, to){
   var jsonPayload = JSON.stringify({
