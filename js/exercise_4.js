@@ -12,7 +12,7 @@ var accessToken = 'pk.eyJ1IjoiZWwtcyIsImEiOiJjbWxMT3BJIn0.aaOFFPZxMh3dFMaccYwRuw
 L.mapbox.accessToken = accessToken;
 var map = L.mapbox.map('map', mapId);
 
-var dataFileToAdd = 'data/restaurants.geojson'
+var dataFileToAdd = 'data/cbdLunch.geojson'
 var featureLayer = L.mapbox.featureLayer()
     .loadURL(dataFileToAdd)
     .addTo(map);
@@ -42,8 +42,9 @@ var info = '';
 
     info += '<div>'
     info += '<h2>' + feature.properties.name + '</h2>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.cuisine + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.phone + '</p>'
+    if(feature.properties.phone) info +=   '<p>'  + feature.properties.type + '</p>'
+    if(feature.properties.phone) info +=   '<p>'  + feature.properties.descriptio + '</p>'
+    if(feature.properties.phone) info +=   '<p>'  + feature.properties.cost + '</p>'
     if(feature.properties.phone) info +=   '<p>'  + feature.properties.website + '</p>'
     if(feature.properties.phone) info +=   '<p><a href="' + feature.properties.website + '">'  + feature.properties.website + '</a></p>'
     info += '</div>'
