@@ -42,11 +42,11 @@ var info = '';
 
     info += '<div>'
     info += '<h2>' + feature.properties.Name + '</h2>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.Type + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.descriptio + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.Cost + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.Website + '</p>'
-    if(feature.properties.phone) info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.website + '</a></p>'
+    info +=  '<p>'  + feature.properties.Type + '</p>'
+    info +=   '<p>'  + feature.properties.descriptio + '</p>'
+    info +=   '<p>'  + feature.properties.Cost + '</p>'
+    info +=   '<p>'  + feature.properties.Website + '</p>'
+    info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.website + '</a></p>'
     info += '</div>'
 
     $('#info').append(info);
