@@ -30,7 +30,7 @@ featureLayer.on('ready', function() {
 
 //featureLayer.on('ready', function(){
 //  this.eachLayer(function(layer){
- //   layer.bindPopup('Welcome to ' + layer.feature.properties.name);
+ //   layer.bindPopup(layer.feature.properties.Name);
  // });
 //});
 
@@ -41,12 +41,12 @@ var clickHandler = function(e){
 var info = '';
 
     info += '<div>'
-    info += '<h2>' + feature.properties.name + '</h2>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.type + '</p>'
+    info += '<h2>' + feature.properties.Name + '</h2>'
+    if(feature.properties.phone) info +=   '<p>'  + feature.properties.Type + '</p>'
     if(feature.properties.phone) info +=   '<p>'  + feature.properties.descriptio + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.cost + '</p>'
-    if(feature.properties.phone) info +=   '<p>'  + feature.properties.website + '</p>'
-    if(feature.properties.phone) info +=   '<p><a href="' + feature.properties.website + '">'  + feature.properties.website + '</a></p>'
+    if(feature.properties.phone) info +=   '<p>'  + feature.properties.Cost + '</p>'
+    if(feature.properties.phone) info +=   '<p>'  + feature.properties.Website + '</p>'
+    if(feature.properties.phone) info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.website + '</a></p>'
     info += '</div>'
 
     $('#info').append(info);
