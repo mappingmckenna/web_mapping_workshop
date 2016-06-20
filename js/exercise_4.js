@@ -68,11 +68,11 @@ featureLayer.on('ready', function(){
   });
 });
 
-map.on('click',function(e){
-  $('#sidebar').fadeOut(200);
-});
+//map.on('click',function(e){
+//  $('#sidebar').fadeOut(400);
+//});
 
-var myLocation = L.mapbox.featureLayer().addTo(map);
+var myLoca4ion = L.mapbox.featureLayer().addTo(map);
 
 map.on('locationfound', function(e) {
 
