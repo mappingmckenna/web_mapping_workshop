@@ -35,25 +35,28 @@ featureLayer.on('ready', function(){
   });
 });
 */
-var clickHandler = function(e){
-    $('#info').empty();
-  var feature = e.target.feature;
-  $('#sidebar').fadeIn(400, function(){
 
+//fill side bar
+var clickHandler = function(e){
+  $('#info').empty();
+
+  var feature = e.target.feature;
+
+
+  $('#sidebar').fadeIn(400,function(){
     var info = '';
 
     info += '<div>'
     info += '<h2>' + feature.properties.Name + '</h2>'
-    //info +=  '<p>'  + feature.properties.Type + '</p>'
-   // info +=   '<p>'  + feature.properties.descriptio + '</p>'
-    info +=   '<p>'  + feature.properties.Cost + '</p>'
-   // info +=   '<p>'  + feature.properties.Website + '</p>'
-    info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.Website + '</a></p>'
+    if(feature.properties.Website) info +=   '<p>'  + feature.properties.Type + '</p>'
+    if(feature.properties.website) info +=   '<p>'  + feature.properties.descript_1 + '</p>'
+    if(feature.properties.website) info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.Website + '</a></p>'
     info += '</div>'
 
     $('#info').append(info);
   });
 };
+
 
 var myGeoJSON = myLocation.getGeoJSON();
 
