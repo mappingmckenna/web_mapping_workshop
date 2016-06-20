@@ -38,6 +38,7 @@ featureLayer.on('ready', function(){
 
 //fill side bar
 var clickHandler = function(e){
+  
   $('#info').empty();
 
   var feature = e.target.feature;
@@ -48,9 +49,9 @@ var clickHandler = function(e){
 
     info += '<div>'
     info += '<h2>' + feature.properties.Name + '</h2>'
-    if(feature.properties.Website) info +=   '<p>'  + feature.properties.Type + '</p>'
-    if(feature.properties.Website) info +=   '<p>'  + feature.properties.descript_1 + '</p>'
-    if(feature.properties.Website) info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.Website + '</a></p>'
+  //  if(feature.properties.Website) info +=   '<p>'  + feature.properties.Type + '</p>'
+ //   if(feature.properties.Website) info +=   '<p>'  + feature.properties.descriptio + '</p>'
+  //  if(feature.properties.Website) info +=   '<p><a href="' + feature.properties.Website + '">'  + //feature.properties.Website + '</a></p>'
     info += '</div>'
 
     $('#info').append(info);
