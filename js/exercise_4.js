@@ -28,14 +28,15 @@ featureLayer.on('ready', function() {
   });
   map.fitBounds(featureLayer.getBounds());
 });
-/*
+
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
     layer.bindPopup(layer.feature.properties.Name);
   });
 });
-*/
 
+
+/*
 //fill side bar
 var clickHandler = function(e){
   
@@ -49,15 +50,15 @@ var clickHandler = function(e){
 
     info += '<div>'
     info += '<h2>' + feature.properties.Name + '</h2>'
-  //  if(feature.properties.Website) info +=   '<p>'  + feature.properties.Type + '</p>'
- //   if(feature.properties.Website) info +=   '<p>'  + feature.properties.descriptio + '</p>'
-  //  if(feature.properties.Website) info +=   '<p><a href="' + feature.properties.Website + '">'  + //feature.properties.Website + '</a></p>'
+    if(feature.properties.Website) info +=   '<p>'  + feature.properties.Type + '</p>'
+    if(feature.properties.Website) info +=   '<p>'  + feature.properties.descriptio + '</p>'
+    if(feature.properties.Website) info +=   '<p><a href="' + feature.properties.Website + '">'  + feature.properties.Website + '</a></p>'
     info += '</div>'
 
     $('#info').append(info);
   });
 };
-
+*/
 /*
 var myGeoJSON = myLocation.getGeoJSON();
 
